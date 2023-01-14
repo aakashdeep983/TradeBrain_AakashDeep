@@ -1,29 +1,24 @@
 .searchInputs {
   margin-top: 15px;
   margin-right: 800px;
-  display: flex;
+  display: flex;  
 }
-
 .search input {
   background-color: white;
   border: 1;
   border-color: gray;
   border-radius: 10px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
   font-size: 18px;
   padding: 12px;
   height: 20px;
-  width: 300px;
+  width: 600px;
   display: block;
 }
-
 .searchIcon {
   height: 60px;
   width: 50px;
-  background-color: white;
   display: grid;
-  place-items: center;
+  place-items: center;  
 }
 
 input:focus {
@@ -149,8 +144,7 @@ a:hover {
   text-align:center;
   background-color: green;
   color: #ffffff;
-  margin-left: 380px;
-  margin-top: -790px;
+  margin-left: 10px;
   width: 100px;
   height: 30px;
   position: static;

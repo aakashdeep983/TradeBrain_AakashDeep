@@ -82,7 +82,13 @@ function Home({ placeholder, data }) {
           </h2>
         </div>
       </div>
-      <div className="search ">
+      <Link 
+          to="/WatchList"
+          className="watchlist"
+        >
+          WatchList
+        </Link>
+      <div className="search ">  
         <div className="searchInputs">
           <input
             type="text"
@@ -92,11 +98,13 @@ function Home({ placeholder, data }) {
             onChange={handleFilter}
           />
           <div className="searchIcon">
-            {filteredData.length === 0 ? (
+            {filteredData.length === 0 
+            ? (
               <SearchIcon />
             ) : (
               <CloseIcon id="clearBtn" onClick={clearInput} />
-            )}
+            )
+            }
           </div>
         </div>
         {filteredData.length != 0 && (
@@ -115,7 +123,6 @@ function Home({ placeholder, data }) {
             })}
           </div>
         )}
-
         <br />
         <br />
         <table
@@ -176,12 +183,7 @@ function Home({ placeholder, data }) {
               ))}
           </tbody>
         </table>
-        <Link 
-          to="/WatchList"
-          className="watchlist"
-        >
-          WatchList
-        </Link>
+      
       </div>
     </Fragment>
   );
