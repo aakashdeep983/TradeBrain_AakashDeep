@@ -32,6 +32,7 @@ const WatchList = () => {
           height: "30px",
           display: "block",
           marginLeft: "10px",
+          cursor: 'pointer'
         }}
       >
         Back to Home
@@ -39,22 +40,7 @@ const WatchList = () => {
       <br />
       <div className="" style={{ marginLeft: "10px" }}>
         <table
-          className="table container"
-          style={{
-            border: "1px",
-            width: "1000px",
-            height: "300px",
-            borderRadius: "10px",
-            marginLeft: "0rem",
-            marginBottom: "1rem",
-            padding: "0.75rem",
-            verticalAlign: "bottom",
-            borderBottom: "1px solid #ff00ff",
-            borderTop: "1px solid #ff00ff",
-            borderLeft: "1px solid #ff00ff",
-            borderRight: "1px solid #ff00ff",
-          }}
-        >
+          className="table container">
           <thead>
             <tr role="row">
               <th
