@@ -1,12 +1,13 @@
 import React, { useState, Fragment,useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import "./Home";
 
 const WatchList = () => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/");
   };
-
+  //console.log(localStorage.getItem("inputValue"),"***")
   const [list, setList] = useState([]);
 
   // useEffect(()=>{
@@ -72,22 +73,25 @@ const WatchList = () => {
           </thead>
 
           <tbody>
-          {list &&
-                    list?.map((data) => (
+          {/* {list &&
+                    list?.map((data) => ( */}
             <tr role="row" style={{ cursor: "pointer" }} className="odd">
-              <td>{data.name}</td>
+              {/* <td>{data.name}</td> */}
+              <td>
+            {localStorage.getItem("inputValue")}
+              </td>
               <td>USD</td>
 
               <td>
-                {/* <button
+                <button
                     style={{ width: "50px", height: "20px",marginLeft:'5px' }}
-                     onClick={() => deleteHandle(value)}
+                   //  onClick={() => deleteHandle(value)}
                   >
                     <i className="fa fa-trash">Delete</i>
-                  </button> */}
+                  </button>
               </td>
             </tr>
-             ))} 
+             {/* ))}  */}
           </tbody>
         </table>
       </div>

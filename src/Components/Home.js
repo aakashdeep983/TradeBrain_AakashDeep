@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState,useRef, useEffect, Fragment } from "react";
 import "./Home.css";
 import "./WatchList";
 import SearchIcon from "@material-ui/icons/Search";
@@ -15,12 +15,21 @@ function Home({ placeholder, data }) {
     setFilteredData([]);
   };
 
-  localStorage.setItem("message", "saved in browser storage");
-  console.log(localStorage.getItem("message"));
-  console.log(filteredData[1])
+  // localStorage.setItem("message", "saved in browser storage");
+  // console.log(localStorage.getItem("message"));
+  // console.log(filteredData[1])
 
-  // const [rowsData, setRowsData] = useState([]);
  
+// store data in local storage
+const data1=useRef();
+const handleClick=()=>{
+ // console.log(data1.current.value,"Company Name Added")
+    localStorage.setItem("inputValue",data1.current.value)
+    alert("Added Company Name")
+}
+// console.log(localStorage.getItem("inputValue"),"***")
+
+
     const addTableRows = ()=>{
         const rowsInput={
             name:'',
@@ -91,6 +100,7 @@ function Home({ placeholder, data }) {
       <div className="search ">  
         <div className="searchInputs">
           <input
+            ref={data1}
             type="text"
             name="name"
             placeholder={placeholder}
@@ -123,6 +133,8 @@ function Home({ placeholder, data }) {
             })}
           </div>
         )}
+
+        <button onClick={handleClick}>Add</button>
         <br />
         <br />
         <table
