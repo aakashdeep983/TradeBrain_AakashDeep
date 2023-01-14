@@ -82,7 +82,7 @@ function Home({ placeholder, data }) {
           </h2>
         </div>
       </div>
-      <div className="search">
+      <div className="search ">
         <div className="searchInputs">
           <input
             type="text"
@@ -119,12 +119,13 @@ function Home({ placeholder, data }) {
         <br />
         <br />
         <table
-          className="table"
+          className="table container"
           style={{
-            border: "10px",
+            border: "1px",
             width: "1000px",
             height: "300px",
             borderRadius: "10px",
+            marginLeft: "0rem",
             marginBottom: "1rem",
             padding: "0.75rem",
             verticalAlign: "bottom",
@@ -190,14 +191,14 @@ function Home({ placeholder, data }) {
               ))}
           </tbody>
         </table>
-        <Link
+        <Link 
           to="/WatchList"
           style={{
             border: "1px solid #ff00ff",
             textAlign:'center',
             backgroundColor: "Highlight",
             color: "#ffffff",
-            marginLeft: "800px",
+            marginLeft: "450px",
             marginTop: "-400px",
             width: "100px",
             height: "30px",

@@ -13,7 +13,7 @@ export default function App() {
         <Route
           index
           element={
-            <div className="App">
+            <div className="container">
               <Home placeholder="Search company name and its share price..." />{" "}
             </div>
           }
@@ -21,7 +21,7 @@ export default function App() {
         <Route
           path="watchList"
           element={
-            <div className="App">
+            <div className="container">
               <WatchList />
             </div>
           }

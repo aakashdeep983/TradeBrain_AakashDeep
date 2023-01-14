@@ -37,14 +37,15 @@ const WatchList = () => {
         Back to Home
       </button>
       <br />
-      <div style={{ marginLeft: "10px" }}>
+      <div className="" style={{ marginLeft: "10px" }}>
         <table
-          className="table"
+          className="table container"
           style={{
-            border: "10px",
+            border: "1px",
             width: "1000px",
             height: "300px",
             borderRadius: "10px",
+            marginLeft: "0rem",
             marginBottom: "1rem",
             padding: "0.75rem",
             verticalAlign: "bottom",
